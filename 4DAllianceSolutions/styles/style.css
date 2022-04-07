@@ -33,6 +33,35 @@ button{
     display: grid;
 }
 
+.scrollup-btn {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    background-color: #1EA5F1;
+    border-radius: .5rem;
+    padding: 0.3rem 0.6rem;
+    opacity: 9;
+    z-index: 5;
+    transition: .4s;
+
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.356);
+}
+  
+.scrollup-btn:hover {
+    background-color: #1EA5F1;
+    opacity: 1;
+}
+  
+.scrollup__icon {
+    color: #E8F6FE;
+    font-size: 1.55rem;
+}
+
+.show-scroll {
+    bottom: 5rem;
+}
+
 /* Header */ 
 
 .nav__menu {
@@ -44,10 +73,11 @@ button{
     position: fixed;
     z-index: 10;
     background-color: transparent;
+    transition: 0.3s all ease;
 }
 
 .nav__container {
-     width: 95%;
+     width: 90%;
      height: 4rem;
      margin: auto;
      display: flex;
@@ -70,6 +100,7 @@ button{
 .nav__container .nav__toggle {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 /* Side Nav */
@@ -131,6 +162,10 @@ button{
     color: #E8F6FE;
 }
 
+.active-link {
+    background-color: #1EA5F1;
+}
+
 .side__menu ul li a {
     color: #016FAD;
     font-weight: 300;
@@ -153,7 +188,7 @@ button{
 /* Carousel */
 
 .carousel-inner {
-    height: 255px;
+    height: 335px;
     border-bottom-left-radius: 50px !important;
     z-index: 5;
 }
@@ -175,6 +210,10 @@ button{
     font-family: 'Outfit', sans-serif;
 }
 
+.carousel {
+    height: 100%;
+}
+
 .carousel-item {
     height: 100% !important;
     width: 100% !important;
@@ -182,6 +221,7 @@ button{
 
 .img-carousel {
     width: 100% !important;
+    height: 100% !important;
 }
 
 .carousel-indicators {
@@ -197,17 +237,28 @@ button{
 /* Home Section */
 .home__section {
     width: 100%;
-    height: 100vh;
+    height: 100%;
 
     position: relative;
+    overflow: hidden;
+
 }
+
+.home__container {
+    width: 100%;
+    height: 100%;
+
+    padding-bottom: 8rem;
+}
+
 
 .home__texts {
     z-index: 4;
-    width: 95%;
+    width: 90%;
     margin: auto;
-    padding-top: 2.1rem;
+    padding-top: 3rem;
     font-family: 'Outfit', sans-serif;
+
 }
 
 .home__texts .company {
@@ -221,11 +272,12 @@ button{
 }
 
 .home__texts .home__title {
-    font-size: 41px;
+    font-size: 46px;
     font-weight: 700;
     letter-spacing: -2.8px;
     color: #3D3D3D;
-    line-height: 2.6rem;
+    line-height: 3rem;
+    max-width: 230px;
 }
 
 .home__texts .home__title span {
@@ -234,25 +286,28 @@ button{
 
 .home__texts .home__desc {
     color: #606060;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 200;
-    width: 78%;
+    width: 84%;
+    max-width: 270px;
     letter-spacing: .4px;
     line-height: 1rem;
     font-family: "Lato", sans-serif;
 }
 
 .btn-primary {
-    height: 43px;
-    width: 127px;
+    height: 48px;
+    width: 142px;
     margin-top: 0.7rem;
     background-color: transparent;
     border: 1px solid #1EA5F1;
     border-radius: 0px;
     color: #016FAD;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     font-family: "Ubuntu", sans-serif;
+
+    backdrop-filter: blur(4px);
 }
 
 .glass {
@@ -316,7 +371,7 @@ button{
     right: -15rem;
     z-index: 4;
     opacity: .3;
-    top: -1rem;
+    top: 4rem;
 }
 
 .pattern__2 {
@@ -324,7 +379,7 @@ button{
     left: -14rem;
     z-index: 4;
     opacity: .3;
-    bottom: -15rem;
+    bottom: -17rem;
 }
 
 
@@ -335,4 +390,221 @@ button{
     align-items: center;
     justify-content: center;
     position: absolute;
+}
+
+/* About Section */
+.about__section {
+    height: 100%;
+    width: 100%;
+    background-color: #EFF9FF;
+}
+
+.about__container {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.about__contents {
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.about__contents .about__title .span {
+    height:  3px;
+    width: 46px;
+    background-color: #F1AD5E;
+}
+
+.about__contents .about__title .dot {
+    color: #F1AD5E;
+}
+
+.about__contents .about__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about__text {
+    font-family: "Outfit", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.about__desc {
+    font-family: "Outfit", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__1 {
+    padding-top: 2rem;
+}
+
+.card__1 img {
+    width: 100%;
+}
+
+.card__2 {
+    padding-top: 1rem;
+}
+
+.card__2 img {
+    width: 100%;
+}
+
+.about__info {
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about__info h1 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+    color: #3D3D3D;
+}
+
+.about__info p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #A4A2A2;
+    width: 85%;
+    max-width: 280px;
+}
+
+.about__info .lines {
+    width: 243px;
+    height: 2px;
+    background-color: #016FAD;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+
+/* About Section */
+
+/* Services Section */
+
+.services__section {
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+}
+
+.waves {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: -5;
+}
+
+.services__container {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+
+    padding-top: 5rem;
+}
+
+.services__contents {
+    width: 100%;
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.services__contents .services__title .span {
+    height:  3px;
+    width: 46px;
+    background-color: #F1AD5E;
+    margin-bottom: 1rem;
+}
+
+.services__contents .services__title .dot {
+    color: #F1AD5E;
+}
+
+.services__contents .services__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.services__text {
+    font-family: "Outfit", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.services__desc {
+    font-family: "Outfit", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.services__cards {
+    cursor: pointer;
+    width: 100%;
+    max-width: 351px;
+    height: 351px;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    background-color: #E8F6FE;
+}
+
+.services__cards:hover {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.247);
+    transform: scale(1.1);
+    transition: 0.3s all ease;
+}
+
+.service__logo {
+    padding-bottom: 3rem;
+}
+
+.service__title {
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.service__desc {
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.services__contents button {
+    margin: 3rem 0rem;
+    border: 1px solid #3D3D3D;
+    color: #3D3D3D;
 }

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css">
     <title>4D Aliance Solutions Inc.</title>
 </head>
@@ -52,16 +53,16 @@
                 <div class="side__menu" id="side-menu">
                     <ul class="side__list">
                         <li class="side__item">
-                            <a href="#home" class="side__link active-link">Home</a>
+                            <a href="#home" class="side__link">Home</a>
                         </li>
                         <li class="side__item">
-                            <a href="#specs" class="side__link">About</a>
+                            <a href="#about" class="side__link">About</a>
                         </li>
                         <li class="side__item">
-                            <a href="#case" class="side__link">Services</a>
+                            <a href="#services" class="side__link">Services</a>
                         </li>
                         <li class="side__item">
-                            <a href="#products" class="side__link">Works</a>
+                            <a href="#works" class="side__link">Works</a>
                         </li>
                         <li class="side__item">
                             <a href="#products" class="side__link" id="contact__btn">Contact</a>
@@ -75,7 +76,7 @@
 
     <main class="main">
         <!-- Home Section -->
-        <section class="home__section grid">
+        <section class="home__section grid" id="home">
                <div class="div-bg">
                     <div class="glass"></div>
                     <div class="pattern">
@@ -124,7 +125,131 @@
             </div>
         </section>
          <!-- Home Section -->
+
+         <!-- About Section -->
+         <section class="about__section grid" id="about">
+            <div class="about__container">
+                <div class="about__contents d-flex flex-column">
+                    <div class="about__texts d-flex flex-column">
+                        <div class="about__title">
+                            <div class="span">
+
+                            </div>
+                            <h1 class="about__text">About us<span class="dot">.</span></h1>
+                        </div>
+                        <p class="about__desc">
+                            WE ARE MORE THAN JUST MORE JUST DO IT
+                        </p>
+                    </div>
+                   <div class="cards">
+                        <div class="card__1">
+                            <img src="/img/pic-1.png" alt="" srcset="">
+                        </div>
+                        <div class="card__2">
+                            <img src="/img/pic-2.png" alt="" srcset="">
+                        </div>
+                   </div>
+                   <div class="about__us__info">
+                       <div class="about__info">
+                            <h1>
+                                Who we are
+                            </h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            </p>
+                            <div class="lines">
+
+                            </div>
+                       </div>
+                       <div class="about__info">
+                            <h1>
+                                Vision
+                            </h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            </p>
+                            <div class="lines">
+
+                            </div>
+                        </div>
+                        <div class="about__info">
+                            <h1>
+                                Our philosophy
+                            </h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            </p>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+         <!-- About Section -->
+
+         <!-- Services -->
+         <section class="services__section grid" id="services">
+            <div class="services__container">
+                <div class="services__contents d-flex flex-column">
+                    <div class="services__texts d-flex flex-column">
+                        <div class="services__title">
+                            <h1 class="services__text">Services<span class="dot">.</span></h1>
+                            <div class="span">
+
+                            </div>
+                        </div>
+                        <p class="services__desc">
+                            WE ARE MORE THAN JUST MORE JUST DO IT
+                        </p>
+                    </div>
+                    <div class="services__cards">
+                        <div class="service__logo">
+                            <img src="/img/logo-1.png" alt="">
+                        </div>
+                        <h1 class="service__title">
+                            WE CONSTRUCT AND CABLING
+                        </h1>
+                        <p class="service__desc">
+                            We have Engineers for your construction requirements as well as IT professionals for your network cabling needs.
+                        </p>
+                    </div>
+                    <div class="services__cards">
+                        <div class="service__logo">
+                            <img src="/img/logo-2.png" alt="">
+                        </div>
+                        <h1 class="service__title">
+                            WE 
+                            DESIGN
+                        </h1>
+                        <p class="service__desc">
+                            We have designers for your pleasant and ideal looks that trends today.
+                        </p>
+                    </div>
+                    <div class="services__cards">
+                        <div class="service__logo">
+                            <img src="/img/logo-3.png" alt="">
+                        </div>
+                        <h1 class="service__title">
+                            WE MANUFACTURE CASING FOR USHER
+                        </h1>
+                        <p class="service__desc">
+                            We supply casing for USHER Technologies
+                        </p>
+                    </div>
+                    <button type="button" class="btn btn-primary ">See all</button>
+                </div>
+            </div>
+            <div class="waves">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#EFF9FF" fill-opacity="1" d="M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,256C672,299,768,309,864,304C960,299,1056,277,1152,250.7C1248,224,1344,192,1392,176L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+            </div>
+        </section>
+         <!-- Services -->
+           
+        <a href="#" class="scrollup-btn" id="scroll-up">
+            <i class="ri-arrow-up-s-line scrollup__icon"></i>
+        </a>
     </main>
+
+  
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
